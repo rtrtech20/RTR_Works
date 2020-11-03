@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no"
+    />
+    <title>Panolens.js panorama simple gallery</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Roboto", sans-serif;
+        background-color: #eee;
+      }
+
+      a:link,
+      a:visited {
+        color: #bdc3c7;
+      }
+
+      .credit {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        color: #fff;
+      }
+
+      #gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4px;
+      }
+
+      .title {
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      #panorama-container {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: rgba(0, 0, 0, 0.9);
+        transform: scale(0, 0);
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+      }
+
+      #panorama-container.open {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+
+      .photo {
+        flex-grow: 1;
+        width: 360px;
+        height: 240px;
+        background-size: cover;
+        margin: 4px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .photo:hover {
+        border-color: #000;
+      }
+
+      #progress-bar {
+        position: fixed;
+        top: 0;
+        width: 0;
+        height: 5px;
+        background-color: #fff;
+        transition: opacity 0.5s ease;
+      }
+
+      .close {
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        right: 0;
+        margin: 20px;
+        cursor: pointer;
+      }
+
+      .close > i {
+        color: #fff;
+        font-size: 44px;
+      }
+
+      #main-container {
+        width: 100%;
+        height: 80%;
+        align-self: center;
+        background-color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="gallery-container">
+      <div class="title">Panolens Gallery Example</div>
+    </div>
+
+    <div id="panorama-container">
+      <!-- Progress bar -->
+      <div id="progress-bar"></div>
+
+      <!-- Close button -->
+      <div class="close">
+        <i class="material-icons">close</i>
+      </div>
+
+      <!-- Main container -->
+      <div id="main-container"></div>
+    </div>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/panolens.min.js"></script>
+
+    <script>
+      var gallery,
+        galleryContainer,
+        photo,
+        desc,
+        panoramaContainer,
+        mainContainer,
+        closeButton,
+        animationEndEvents,
+        viewer,
+        panorama,
+        progress,
+        path,
+        format,
+        url;
+
+      gallery = [
+        "pic-1",
+        "pic-2",
+        "pic-3",
+        "pic-4",
+        "pic-5",
+        "pic-6",
+        "pic-7",
+        "pic-8",
+        "pic-9",
+        "pic-10",
+        "pic-11",
+        "pic-12",
+        "pic-13",
+        "pic-14",
+        "pic-15",
+        "pic-16",
+        "pic-17",
+        "pic-18",
+        "pic-19",
+        "pic-20",
+        "pic-21",
+        "pic-22",
+        "pic-23",
+        "pic-24",
+        "pic-25",
+        "pic-26",
+        "pic-27",
+        "pic-28",
+        "pic-29",
+        "pic-30",
+        "pic-31",
+        "pic-32",
+        "pic-33",
+        "pic-34",
+      ];
+      path = "images/";
+      format = ".jpg";
+
+      urls = [
+        "images/pic-1.jpg",
+        "images/pic-2.jpg",
+        "images/pic-3.jpg",
+        "images/pic-4.jpg",
+        "images/pic-5.jpg",
+        "images/pic-6.jpg",
+        "images/pic-7.jpg",
+        "images/pic-8.jpg",
+        "images/pic-9.jpg",
+        "images/pic-10.jpg",
+        "images/pic-11.jpg",
+        "images/pic-12.jpg",
+        "images/pic-13.jpg",
+        "images/pic-14.jpg",
+        "images/pic-15.jpg",
+        "images/pic-16.jpg",
+        "images/pic-17.jpg",
+        "images/pic-18.jpg",
+        "images/pic-19.jpg",
+        "images/pic-20.jpg",
+        "images/pic-21.jpg",
+        "images/pic-22.jpg",
+        "images/pic-23.jpg",
+        "images/pic-24.jpg",
+        "images/pic-25.jpg",
+        "images/pic-27.jpg",
+        "images/pic-28.jpg",
+        "images/pic-29.jpg",
+        "images/pic-30.jpg",
+        "images/pic-31.jpg",
+        "images/pic-32.jpg",
+        "images/pic-33.jpg",
+        "images/pic-34.jpg",
+      ];
+
+      galleryContainer = document.getElementById("gallery-container");
+      panoramaContainer = document.getElementById("panorama-container");
+      mainContainer = document.getElementById("main-container");
+      progressBar = document.getElementById("progress-bar");
+      closeButton = panoramaContainer.querySelector(".close");
+
+      function buildGallery() {
+        for (i = 0; i < urls.length; i++) {
+          url = urls[i];
+
+          photo = document.createElement("div");
+          photo.style.backgroundImage = "url(" + url + ")";
+          photo.classList.add("photo");
+
+          if (this.url.indexOf("1941-battle.jpg") !== -1) {
+            photo.url = "asset/textures/video/1941-battle-low.mp4";
+            photo.type = "video";
+          } else if (this.url.indexOf("panorama_video.jpg") !== -1) {
+            photo.url = "asset/textures/video/ClashofClans.mp4";
+            photo.type = "video";
+          } else {
+            photo.url = url;
+            photo.type = "image";
+          }
+
+          photo.addEventListener(
+            "click",
+            function () {
+              // Keep one panorama
+              if (panorama) {
+                return;
+              }
+
+              // Dynamically generate panorama
+              if (this.type === "image") {
+                panorama = new PANOLENS.ImagePanorama(this.url);
+              } else if (this.type === "video") {
+                panorama = new PANOLENS.VideoPanorama(this.url, {
+                  autoplay: true,
+                });
+              } else {
+                return;
+              }
+
+              panorama.addEventListener("progress", function (event) {
+                progress = (event.progress.loaded / event.progress.total) * 100;
+
+                progressBar.style.width = progress + "%";
+
+                if (progress === 100) {
+                  progressBar.style.opacity = 0;
+                }
+              });
+              viewer.add(panorama);
+
+              panoramaContainer.classList.add("open");
+            },
+            false
+          );
+
+          galleryContainer.appendChild(photo);
+        }
+      }
+
+      function setupPanolens() {
+        viewer = new PANOLENS.Viewer({ container: mainContainer });
+      }
+
+      function disposePanorama() {
+        panorama.dispose();
+        viewer.remove(panorama);
+        panorama = null;
+      }
+
+      function init() {
+        // Build up gallery
+        buildGallery();
+
+        // Setup panolens
+        setupPanolens();
+
+        // Dispose panorama when close
+        closeButton.addEventListener(
+          "click",
+          function () {
+            disposePanorama();
+
+            progressBar.style.width = 0;
+            progressBar.style.opacity = 1;
+
+            panoramaContainer.classList.remove("open");
+          },
+          false
+        );
+      }
+
+      init();
+    </script>
+  </body>
+</html>

@@ -17,7 +17,6 @@ const data = {
   ],
   products: [
     {
-      _id: "1",
       name: "Rahul Slim Shirt",
       category: "Shirts",
       image: "/images/product-1.jpg",
@@ -29,7 +28,6 @@ const data = {
       description: "High quaity product",
     },
     {
-      _id: "2",
       name: "Adidas Fit Shirt",
       category: "Shirts",
       image: "/images/product-2.jpg",
@@ -41,7 +39,6 @@ const data = {
       description: "High quaity product",
     },
     {
-      _id: "3",
       name: "Puma Slim Shirt",
       category: "Shirts",
       image: "/images/product-3.jpg",
@@ -53,7 +50,6 @@ const data = {
       description: "High quaity product",
     },
     {
-      _id: "4",
       name: "Buffalo formal pants",
       category: "Pants",
       image: "/images/product-4.jpg",
@@ -65,7 +61,6 @@ const data = {
       description: "High quaity product",
     },
     {
-      _id: "5",
       name: "Puma Slim pants",
       category: "Pants",
       image: "/images/product-5.jpg",
@@ -77,7 +72,6 @@ const data = {
       description: "High quaity product",
     },
     {
-      _id: "6",
       name: "Knighthood formal pants",
       category: "Pants",
       image: "/images/product-6.jpg",

@@ -140,14 +140,14 @@ button {
 
 .white-pill-button {
   background-color: transparent;
-  border-color: #ffffff;
+  border-color: #c9f5ff;
   border-radius: 25px;
 }
 
 .white-pill-button:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
 
 .social-icon .list-inline-item i:hover {
@@ -200,13 +200,13 @@ button {
 }
 
 /*-------------------------
-        HEADER
+        HEADER START
 -------------------------*/
 .header {
   padding: 10px 0;
   transition: all 0.8s ease;
   border-bottom: 1px solid #a8a8a8;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 .header nav a {
   color: #000 !important;
@@ -240,9 +240,12 @@ button {
 .header-sticky nav a.navbar-brand {
   color: #222;
 }
+/*-------------------------
+        HEADER END
+-------------------------*/
 
 /*-------------------------
-          HERO
+          HERO START
 -------------------------*/
 .hero::before {
   content: "";
@@ -268,16 +271,17 @@ button {
 }
 
 .hero .hero-item1 {
-  background: url("../img/slider-1.jpg") no-repeat center;
+  background: url("../img/american-public-power-association-XGAZzyLzn18-unsplash.jpg") no-repeat center;
   background-size: cover;
+  background-position: bottom center;
 
   /* Add the blur effect */
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 .hero .hero-item1:before {
   content: "";
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: #1d117946;
   position: absolute;
   top: 0;
   right: 0;
@@ -289,14 +293,14 @@ button {
 .hero .hero-item2 {
   background: url("../img/slider-2.jpg") no-repeat center;
   background-size: cover;
-  
+
   /* Add the blur effect */
   filter: blur(5px);
   -webkit-filter: blur(5px);
 }
 .hero .hero-item2:before {
   content: "";
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   right: 0;
@@ -315,10 +319,11 @@ button {
 }
 
 /*-------------------------
-          Skill
+          HERO END
 -------------------------*/
+
 /*-------------------------
-          Skill
+          SKILL START
 -------------------------*/
 .skill-box .skillbar {
   position: relative;
@@ -360,7 +365,10 @@ button {
 }
 
 /*-------------------------
-         Services
+         SKILL END
+-------------------------*/
+/*-------------------------
+         SERVICES START
 -------------------------*/
 .services-item {
   margin-top: 30px;
@@ -373,9 +381,12 @@ button {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+/*-------------------------
+         SERVICES END
+-------------------------*/
 
 /*-------------------------
-          BANNER
+          BANNER START
 -------------------------*/
 .banner {
   background-image: url("../img/slider-1.jpg");
@@ -392,9 +403,12 @@ button {
   width: 100%;
   height: 100%;
 }
+/*-------------------------
+          BANNER START
+-------------------------*/
 
 /*-------------------------
-         PORTFOLIO
+         PORTFOLIO START
 -------------------------*/
 .portfolio .portfolio-filter li a {
   color: #6c757d;
@@ -508,9 +522,12 @@ button {
 .portfolio h4 {
   margin-bottom: 0;
 }
+/*-------------------------
+         PORTFOLIO END
+-------------------------*/
 
 /*-------------------------
-       TESTIMONIAL
+       TESTIMONIAL START
 -------------------------*/
 .testimonial {
   background: url("../img/testimonial-bg.jpg") no-repeat;
@@ -570,9 +587,12 @@ button {
 .testimonial .owl-carousel .testimonial-item .img-thumbnail {
   background-color: transparent;
 }
+/*-------------------------
+       TESTIMONIAL END
+-------------------------*/
 
 /*-------------------------
-         Count up
+         COUNT UP START
 -------------------------*/
 .count-number {
   font-size: 1.5rem;
@@ -581,9 +601,12 @@ button {
 .count-item:not(:last-child) {
   border-right: 1px dashed #cacaca;
 }
+/*-------------------------
+         COUNT UP END
+-------------------------*/
 
 /*-------------------------
-          BLOG
+          BLOG START
 -------------------------*/
 .blog .image-blog img {
   width: 100%;
@@ -605,9 +628,12 @@ button {
 .blog .more-blogs a:hover {
   color: #bf2739 !important;
 }
+/*-------------------------
+          BLOG END
+-------------------------*/
 
 /*-------------------------
-          CONTACT
+          CONTACT START
 -------------------------*/
 .contact ::-moz-placeholder,
 .contact .form-control::-moz-placeholder {
@@ -652,17 +678,23 @@ button {
 .contact .form-item .form-control:focus {
   border-bottom: 1px solid #d23e50;
 }
+/*-------------------------
+          CONTACT END
+-------------------------*/
 
 /*-------------------------
-        Map Location
+        MAP LOCATION START
 -------------------------*/
 #my-map {
   width: 100%;
   height: 100%;
 }
+/*-------------------------
+        MAP LOCATION END
+-------------------------*/
 
 /*-------------------------
-          FOOTER
+          FOOTER START
 -------------------------*/
 footer ul li a {
   color: #ffffff;
@@ -683,9 +715,12 @@ footer .socials li {
 footer .back-to-top:hover {
   color: #d23e50 !important;
 }
+/*-------------------------
+          FOOTER END
+-------------------------*/
 
 /*-------------------------
-       COLOR SCHEME
+       COLOR SCHEME START
 -------------------------*/
 .color-scheme {
   position: fixed;
@@ -713,9 +748,12 @@ footer .back-to-top:hover {
 .color-scheme:hover {
   color: #ffffff;
 }
+/*-------------------------
+       COLOR SCHEME END
+-------------------------*/
 
 /*-------------------------
-       BLOG PAGE
+       BLOG PAGE START
 -------------------------*/
 .page-header {
   padding: 2px 0 !important;
@@ -744,9 +782,12 @@ footer .back-to-top:hover {
 .blog-section .blog-link a:hover {
   color: #343a40 !important;
 }
+/*-------------------------
+       BLOG PAGE END
+-------------------------*/
 
 /*-------------------------
-       SINGLE BLOG
+       SINGLE BLOG START
 -------------------------*/
 .page-hero {
   background-image: url("../img/blog-hero.jpg") !important;
@@ -793,9 +834,12 @@ footer .back-to-top:hover {
   color: #d23e50;
   margin-right: 5px;
 }
+/*-------------------------
+       SINGLE BLOG END
+-------------------------*/
 
 /*-------------------------
-     Single Portfolio
+     SINGLE PORFOLIO START
 -------------------------*/
 .single-portfolio .owl-nav {
   display: block;
@@ -860,9 +904,12 @@ footer .back-to-top:hover {
   border-right: 1px dotted #929292;
   border-left: 1px dotted #929292;
 }
+/*-------------------------
+     SINGLE PORFOLIO END
+-------------------------*/
 
 /*-------------------------
-       MEDIA SCREENS
+       MEDIA SCREENS START
 -------------------------*/
 @media (min-width: 992px) and (max-width: 1199px) {
   .navbar-brand {
@@ -927,3 +974,7 @@ footer .back-to-top:hover {
     padding: 3px 0;
   }
 }
+
+/*-------------------------
+       MEDIA SCREENS END
+-------------------------*/

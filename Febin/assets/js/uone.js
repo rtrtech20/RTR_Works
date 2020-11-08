@@ -29,6 +29,7 @@ $window.on("scroll", function () {
 /*-----------------------------------------------------------------------------
                                    FUNCTIONS
 -----------------------------------------------------------------------------*/
+
 /*-------------------------
         Color Scheme
 -------------------------*/
@@ -427,104 +428,9 @@ function mapInit() {
   }
 }
 
-/*-------------------------
-     AJAX CONTACT FORM
--------------------------*/
-function validateEmail(email) {
-  "use strict";
 
-  var re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
-function sendEmail() {
-  "use strict";
 
-  var name = $("#name").val();
-  var email = $("#email").val();
-  var subject = $("#subject").val();
-  var comments = $("#comments").val();
 
-  if (!name) {
-    $("#message").toast("show").addClass("bg-danger").removeClass("bg-success");
-    $(".toast-body").html("Name is  required");
-  } else if (!email) {
-    $("#message").toast("show").addClass("bg-danger").removeClass("bg-success");
-    $(".toast-body").html("Email is  required");
-  } else if (!validateEmail(email)) {
-    $("#message").toast("show").addClass("bg-danger").removeClass("bg-success");
-    $(".toast-body").html("Email is not valid");
-  } else if (!subject) {
-    $("#message").toast("show").addClass("bg-danger").removeClass("bg-success");
-    $(".toast-body").html("Subject is  required");
-  } else if (!comments) {
-    $("#message").toast("show").addClass("bg-danger").removeClass("bg-success");
-    $(".toast-body").html("Comments is  required");
-  } else {
-    $.ajax({
-      type: "POST",
-      data: $("#contactForm").serialize(),
-      url: "sendEmail.php",
-      beforeSend: function () {
-        $("#submit-btn").html(
-          '<span class="spinner-border spinner-border-sm"></span> Loading..'
-        );
-      },
-      success: function (data) {
-        $("#submit-btn").html("Submit");
-        var myObj = JSON.parse(data);
-        if (myObj["status"] == "Congratulation") {
-          $("#message")
-            .toast("show")
-            .addClass("bg-success")
-            .removeClass("bg-danger bg-warning");
-          $(".toast-body").html(
-            "<strong>" + myObj["status"] + " : </strong> " + myObj["message"]
-          );
-        } else if (myObj["status"] == "Error") {
-          $("#message")
-            .toast("show")
-            .addClass("bg-danger")
-            .removeClass("bg-success bg-warning");
-          $(".toast-body").html(
-            "<strong>" + myObj["status"] + " : </strong> " + myObj["message"]
-          );
-        } else if (myObj["status"] == "Warning") {
-          $("#message")
-            .toast("show")
-            .addClass("bg-warning")
-            .removeClass("bg-success bg-danger");
-          $(".toast-body").html(
-            "<strong>" + myObj["status"] + " : </strong> " + myObj["message"]
-          );
-        }
-      },
-      error: function (xhr) {
-        $("#submit-btn").html("Submit");
-        $("#message")
-          .toast("show")
-          .addClass("bg-danger")
-          .removeClass("bg-success bg-warning");
-        $(".toast-body").html(
-          "<strong> Error : </strong> Something went wrong, Please try again."
-        );
-      },
-    });
-  }
-}
-
-/*-------------------------
-     Back to Top Button
-  -------------------------*/
-function backToTop() {
-  $(".back-to-top").click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      1500
-    );
-  });
-}
 
 /*----------------------------
           WOW Init

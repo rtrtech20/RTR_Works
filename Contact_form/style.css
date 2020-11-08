@@ -1,108 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/************** Progress Bar Styling Start **************/
-
-#progress {
-  background: #f0005a;
-
-  width: 0;
-
-  height: 8px;
-
-  border-radius: 0 10px 10px 0;
-
-  position: fixed;
-
-  top: 66px;
-
-  left: 0;
-
-  z-index: 10;
-}
-
-@media screen and (max-width: 500px){
-  #progress {
-    top: 62px;
-  }
-}
-
-/************** Back-to-Top Button Styling Start **************/
-#button {
-  display: inline-block;
-  background-color: #1cbac8;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  left: 10px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-#button::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 1em;
-  line-height: 1px;
-  color: #fff;
-}
-#button:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-#button:active {
-  background-color: #555;
-}
-#button.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-@media (min-width: 500px) {
-  #button {
-    /* margin: 30px; */
-  }
-}
-/************** Back-to-Top Button Styling End **************/
-
-.navbar-brand {
-  width: 120px;
-
-  height: 40px;
-}
-
-#count-up i {
-  color: #615b8e !important;
-}
-
-.plus {
-  font-size: 1.5rem;
-}
-
-.kW {
-  font-size: 1.5rem;
-}
-
-#services h2 {
-  background: #fff !important;
-}
-
-/* Contact Page */
-#contact {
-  background: url(../img/american-public-power-association-XGAZzyLzn18-unsplash.jpg);
-
-  background-attachment: fixed;
-
-  background-position: bottom center;
 }
 
 #contact,
@@ -111,7 +12,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-#contact.contact-container {
+#contact.container {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -121,7 +22,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
 }
 
 #contact .form {
@@ -187,7 +87,7 @@
   margin-bottom: 0.7rem;
 }
 
-#contact .input-contact-container {
+#contact .input-container {
   position: relative;
   margin: 1rem 0;
 }
@@ -214,7 +114,7 @@
   overflow-y: auto;
 }
 
-#contact .input-contact-container label {
+#contact .input-container label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -228,7 +128,7 @@
   transition: 0.5s;
 }
 
-#contact .input-contact-container.textarea label {
+#contact .input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
@@ -252,7 +152,7 @@
   color: #fff;
 }
 
-#contact .input-contact-container span {
+#contact .input-container span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -264,8 +164,8 @@
   z-index: 500;
 }
 
-#contact .input-contact-container span:before,
-#contact .input-contact-container span:after {
+#contact .input-container span:before,
+#contact .input-container span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -277,23 +177,23 @@
   transform: translateY(-50%);
 }
 
-#contact .input-contact-container span:before {
+#contact .input-container span:before {
   left: 50%;
 }
 
-#contact .input-contact-container span:after {
+#contact .input-container span:after {
   right: 50%;
 }
 
-#contact .input-contact-container.focus label {
+#contact .input-container.focus label {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
 }
 
-#contact .input-contact-container.focus span:before,
-#contact .input-contact-container.focus span:after {
+#contact .input-container.focus span:before,
+#contact .input-container.focus span:after {
   width: 50%;
   opacity: 1;
 }
@@ -371,7 +271,7 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: transparent;
+  background: linear-gradient(to bottom, #c9f5ff, #615b8e);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -382,8 +282,7 @@
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: transparent;
-  border: 10px solid #615b8e;
+  background-color: #fafafa;
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);
@@ -437,10 +336,7 @@
 }
 
 @media (max-width: 480px) {
-  #contact {
-    margin-top: 0 !important;
-  }
-  #contact .contact-container {
+  #contact .container {
     padding: 1.5rem;
   }
 

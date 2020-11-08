@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Megabyte Technologies - Power your homes</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="RTR Technologies" />
-
-    <!--  FavIcon  -->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,600"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700"
-      rel="stylesheet"
-    />
-
-    <!-- Slick CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
-    <!--  Plugins CSS  -->
-    <link rel="stylesheet" href="assets/css/plugins.css" />
-    <!--  Custom Style CSS  -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body id="products-page">
-    <!--  Pre Loader  -->
-    <div id="overlayer"></div>
-    <span class="loader"></span>
-
-    <!--    Header Start    -->
-    <?php include "includes/Header.php"?>
-
-    <!--   Services start  -->
-    <section id="services" class="py-6">
+<!--   Services start  -->
+<section id="services" class="py-6">
       <div class="container">
         <div class="row mt-5">
           <div class="col-lg-12">
@@ -155,29 +114,3 @@
       </div>
     </section>
     <!--   Services End  -->
-
-    <!--   Banner  -->
-    <?php include "includes/Banner.php"?>
-
-    <!--   Get a Quote  -->
-    <?php include "includes/Get-a-quote.php"?>
-
-    <!--   Footer  -->
-    <?php include "includes/Footer.php"?>
-
-    <!--  JavaScripts  -->
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <!-- Slick JS -->
-    <script src="assets/js/slick.min.js"></script>
-    <!--  Plugins JS  -->
-    <script src="assets/js/plugins.js"></script>
-    <!-- Map Js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRemITiP7JRWpZwLhVt-T2x5MeUFE2KWs"></script>
-    <!--  Custom JS  -->
-    <script src="assets/js/uone.js"></script>
-  </body>
-</html>

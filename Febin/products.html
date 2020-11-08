@@ -31,12 +31,7 @@
     <!--  Custom Style CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body
-    data-spy="scroll"
-    data-target="#scrollspy"
-    data-offset="61"
-    id="products-page"
-  >
+  <body id="products-page">
     <!--  Pre Loader  -->
     <div id="overlayer"></div>
     <span class="loader"></span>
@@ -112,17 +107,6 @@
     </header>
     <!--    Header End    -->
 
-    <!--   Banner Start  -->
-    <section class="banner py-6">
-      <div class="col-md-12 text-center text-white">
-        <h2>
-          <small><a class="text-white" href="index.html">Home</a>/</small
-          >Products
-        </h2>
-      </div>
-    </section>
-    <!--   Banner End   -->
-
     <!--   Services start  -->
     <section id="services" class="py-6">
       <div class="container">
@@ -132,10 +116,10 @@
               <h2 class="text-dark mb-3">
                 Our <span class="base-color">Products</span>
               </h2>
-              <p class="text-muted mx-auto section-subtitle max-width-450">
+              <!-- <p class="text-muted mx-auto section-subtitle max-width-450">
                 In a professional context it often happens that private clients
                 corder a publication to be made.
-              </p>
+              </p> -->
             </div>
           </div>
           <!-- Item 01 -->
@@ -281,18 +265,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6 mt-5 text-md-left text-center">
-            <div id="my-map"></div>
-          </div>
-          <div class="col-lg-6 text-md-left text-center">
+          <div class="col-lg-12 text-md-left text-center">
             <div class="col-lg-12 mt-5 contact-form">
-              <h4>Let’s Get Excited Work With Me</h4>
+              <h4>Come & Work With Us</h4>
               <p class="text-muted">
                 Are constantly thriving . It’s not enough trust in the cleaning.
               </p>
               <form id="contactForm">
                 <div class="row">
-                  <div class="col-lg-6 form-item">
+                  <div class="col-md-4 col-sm-6 form-item">
                     <div class="form-group">
                       <input
                         name="name"
@@ -304,7 +285,7 @@
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6 form-item">
+                  <div class="col-lg-4 col-sm-6 form-item">
                     <div class="form-group">
                       <input
                         name="email"
@@ -316,18 +297,59 @@
                       />
                     </div>
                   </div>
-                  <div class="col-12 form-item">
+                  <div class="col-lg-4 col-sm-6 form-item">
                     <div class="form-group">
                       <input
-                        name="subject"
-                        id="subject"
+                        name="phoneNumber"
+                        id="phoneNumber"
                         type="text"
                         class="form-control"
-                        placeholder="Your Subject*"
+                        placeholder="Your Phone Number"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 form-item">
+                    <div class="form-group">
+                      <select name="products" id="productList" required>
+                        <option value="Choose a product">
+                          Choose a product
+                        </option>
+                        <option value="On-Grid Solar Power Plants">
+                          On-Grid Solar Power Plants
+                        </option>
+                        <option value="Off-Grid Solar Power Plants">
+                          Off-Grid Solar Power Plants
+                        </option>
+                        <option value="UPS">UPS</option>
+                        <option value="Inverter">Inverter</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 form-item">
+                    <div class="form-group">
+                      <input
+                        name="capacity"
+                        id="capacity"
+                        type="text"
+                        class="form-control"
+                        placeholder="Capacity*"
                         required
                       />
                     </div>
                   </div>
+                  <div class="col-lg-4 col-sm-6 form-item">
+                    <div class="form-group">
+                      <input
+                        name="location"
+                        id="location"
+                        type="text"
+                        class="form-control"
+                        placeholder="Your Location*"
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <div class="col-12 form-item">
                     <div class="form-group">
                       <textarea
@@ -346,7 +368,7 @@
                       id="submit-btn"
                       onclick="sendEmail()"
                     >
-                      Send Message
+                      Get a Quote
                     </button>
                     <div
                       id="message"
@@ -398,18 +420,20 @@
             </h4>
             <ul class="list-unstyled text-white pt-2 mb-0">
               <li class="py-1">
-                <i class="fa fa-map-marker pr-2"></i> New York NY 10018, USA
+                <i class="fa fa-map-marker pr-2"></i>
+                <a
+                  href="https://www.google.com/maps/place/Megabyte+Technologies/@8.5211453,76.9628252,17z/data=!3m1!4b1!4m5!3m4!1s0x3b05bb04e347011d:0x51d0be4b8a6969c3!8m2!3d8.5211453!4d76.9650192?hl=en"
+                  >VJRA C17, Jawahar Lane Sasthamangalam, Trivandrum -10</a
+                >
               </li>
               <li class="py-1">
-                <i class="fa fa-phone-square pr-2"></i> +1 212-695-1962
+                <i class="fa fa-phone-square pr-2"></i
+                ><a href="tel:9387813000">+91 93878 13000</a>
               </li>
               <li class="py-1">
                 <i class="fa fa-envelope pr-2"></i>
-                <a
-                  href="/cdn-cgi/l/email-protection"
-                  class="__cf_email__"
-                  data-cfemail="3a695b574a565f7a4f55545f14595557"
-                  >[email&#160;protected]</a
+                <a href="mailto:megabyte_technologies@yahoo.co.in"
+                  >megabyte_technologies@yahoo.co.in</a
                 >
               </li>
             </ul>
@@ -460,7 +484,7 @@
             </p>
             <a
               href="#"
-              class="mt-4 mt-lg-3 mb-0 text-white back-to-top d-block d-lg-inline-block float-lg-right text-center"
+              class="mt-4 mt-lg-3 mb-0 text-white d-block d-lg-inline-block float-lg-right text-center"
               >Back To Top</a
             >
           </div>
@@ -470,10 +494,6 @@
     <!--   Footer End  -->
 
     <!--  JavaScripts  -->
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <!-- Slick JS -->
     <script src="assets/js/slick.min.js"></script>

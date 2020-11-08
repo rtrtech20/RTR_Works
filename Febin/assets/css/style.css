@@ -31,6 +31,11 @@
 /*-------------------------
          GENERAL
 -------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -501,9 +506,32 @@ button {
   align-items: center;
 }
 
+#services {
+  background-image: url(../img/american-public-power-association-XGAZzyLzn18-unsplash.jpg);
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#services h2 {
+  background: #fff;
+
+  width: 300px;
+
+  margin: 0 auto;
+
+  border-radius: 50px;
+}
+
 #products-page .services-item {
   margin-top: 30px;
   transition: 0.5s all ease;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  -webkit-box-shadow: 14px 14px 38px -27px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 14px 14px 38px -27px rgba(0, 0, 0, 0.49);
+  box-shadow: 14px 14px 38px -2px rgba(0, 0, 0, 0.49);
 }
 #products-page .services-item:hover {
   transform: translateY(-10px);

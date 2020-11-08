@@ -2,7 +2,7 @@
 <header id="header" class="header fixed-top">
   <nav id="scrollspy" class="navbar navbar-expand-lg header-nav">
     <div class="container">
-      <a class="navbar-brand font-weight-bold mr-lg-3 mr-xl-5" href="index.html"
+      <a class="navbar-brand mr-lg-3 mr-xl-5" href="index.html"
         ><img
           src="assets/img/120x40-blue.png"
           width="120px"
@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse" id="toggle-menu">
         <ul class="navbar-nav nav-pills w-100">
           <li class="nav-item">
-            <a class="nav-link active" href="#hero">Home</a>
+            <a class="nav-link active" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="products.php">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="projects.php">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
           <li class="nav-item ml-lg-auto">
             <div class="social-icon">

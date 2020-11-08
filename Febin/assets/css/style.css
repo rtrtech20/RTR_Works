@@ -424,7 +424,7 @@ button {
 }
 
 @media (max-width: 550px) {
-  .hero_section{
+  .hero_section {
     padding-top: 50px;
   }
   .hero_btn {

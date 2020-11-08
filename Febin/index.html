@@ -30,11 +30,15 @@
     <link rel="stylesheet" href="assets/css/plugins.css" />
     <!--  Custom Style CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/rtr.css" />
   </head>
   <body data-spy="scroll" data-target="#scrollspy" data-offset="61">
     <!--  Pre Loader  -->
     <div id="overlayer"></div>
     <span class="loader"></span>
+
+    <!-- Back to top button -->
+    <a id="button"></a>
 
     <!--    Header Start    -->
     <header id="header" class="header fixed-top">
@@ -44,7 +48,7 @@
             class="navbar-brand font-weight-bold mr-lg-3 mr-xl-5"
             href="index.html"
             ><img
-              src="assets/img/logo-120x40.jpg"
+              src="assets/img/120x40-blue.png"
               width="120px"
               height="40px"
               alt="Megabyte Technologies logo"
@@ -108,44 +112,50 @@
     <!--    Header End    -->
 
     <!--    Hero Start    -->
-    <section class="hero full-screen" id="hero">
+    <!-- <section class="hero full-screen" id="hero">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="owl-carousel owl-theme">
-            <!--  Item1 -->
             <div class="hero-item1 full-screen"></div>
-            <!--  Item2 -->
-            <!-- <div class="hero-item2 full-screen"></div> -->
           </div>
         </div>
         <div class="text-center hero-content">
-          <h1 class="text-white mb-4">
-            <img
-              src="assets/img/logo-white.png"
-              width="300px"
-              alt="Header Logo"
-            />
-          </h1>
-          <p class="text-white mx-auto mt-4">
-            In a professional context it often happens that private clients
-            corder a publication to be made.
-          </p>
-          <div class="mt-4 pt-2">
-            <a
-              href="#about"
-              class="pill-button white-pill-button font-weight-bold"
-              >Read More</a
-            >
-          </div>
-        </div>
-        <div class="hero-icon">
-          <a href="#about">
-            <i class="fa fa-angle-double-down text-white size-sm"></i>
-          </a>
+          <h1 class="text-white mb-4"></h1>
         </div>
       </div>
-    </section>
+    </section> -->
     <!--    Hero End    -->
+
+    <!-- START HERO SECTION -->
+    <div class="hero_section hero-fullscreen fixed_bg para-four">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- END HERO SECTION DESC -->
+            <div class="inner_hero_section">
+              <img
+                src="assets/img/logo-white.png"
+                width="300px"
+                alt="Header Logo"
+              />
+              <p class="text-white mx-auto mt-4">
+                In a professional context it often happens that private clients
+                corder a publication to be made.
+              </p>
+              <div class="mt-4 pt-2">
+                <a
+                  href="#about"
+                  class="pill-button white-pill-button font-weight-bold"
+                  >Read More</a
+                >
+              </div>
+            </div>
+            <!-- END HERO SECTION DESC -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END HERO SECTION -->
 
     <!--   About Start   -->
     <section id="about" class="py-6 about">
@@ -354,7 +364,7 @@
           <div class="col-lg-12">
             <div class="text-center">
               <h2 class="text-dark mb-3">
-                Latest <span class="base-color">News</span>
+                Case <span class="base-color">Studies</span>
               </h2>
               <p class="text-muted max-width-450">
                 In a professional context it often happens that private clients
@@ -664,16 +674,6 @@
     </section>
     <!--   Contact End   -->
 
-    <!-- Slider Demo Start -->
-    <div class="slider-for">
-      <div class="slider-nav">your content</div>
-      <div class="slider-nav">his content</div>
-      <div class="slider-nav">your content</div>
-      <div class="slider-nav">your content</div>
-      <div class="slider-nav">your content</div>
-    </div>
-    <!-- Slider Demo End -->
-
     <!--   Footer Start  -->
     <footer class="bg-dark">
       <div class="container">
@@ -693,18 +693,20 @@
             </h4>
             <ul class="list-unstyled text-white pt-2 mb-0">
               <li class="py-1">
-                <i class="fa fa-map-marker pr-2"></i> New York NY 10018, USA
+                <i class="fa fa-map-marker pr-2"></i>
+                <a
+                  href="https://www.google.com/maps/place/Megabyte+Technologies/@8.5211453,76.9628252,17z/data=!3m1!4b1!4m5!3m4!1s0x3b05bb04e347011d:0x51d0be4b8a6969c3!8m2!3d8.5211453!4d76.9650192?hl=en"
+                  >VJRA C17, Jawahar Lane Sasthamangalam, Trivandrum -10</a
+                >
               </li>
               <li class="py-1">
-                <i class="fa fa-phone-square pr-2"></i> +1 212-695-1962
+                <i class="fa fa-phone-square pr-2"></i
+                ><a href="tel:9387813000">+91 93878 13000</a>
               </li>
               <li class="py-1">
                 <i class="fa fa-envelope pr-2"></i>
-                <a
-                  href="/cdn-cgi/l/email-protection"
-                  class="__cf_email__"
-                  data-cfemail="3a695b574a565f7a4f55545f14595557"
-                  >[email&#160;protected]</a
+                <a href="mailto:megabyte_technologies@yahoo.co.in"
+                  >megabyte_technologies@yahoo.co.in</a
                 >
               </li>
             </ul>
@@ -755,7 +757,7 @@
             </p>
             <a
               href="#"
-              class="mt-4 mt-lg-3 mb-0 text-white back-to-top d-block d-lg-inline-block float-lg-right text-center"
+              class="mt-4 mt-lg-3 mb-0 text-white d-block d-lg-inline-block float-lg-right text-center"
               >Back To Top</a
             >
           </div>
@@ -770,8 +772,7 @@
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
-    <!-- Slick JS -->
-    <script src="assets/js/slick.min.js"></script>
+
     <!--  Plugins JS  -->
     <script src="assets/js/plugins.js"></script>
     <!-- Map Js -->
@@ -779,55 +780,20 @@
     <!--  Custom JS  -->
     <script src="assets/js/uone.js"></script>
 
-    <!-- <script>
-      $(document).ready(function () {
-        $(".your-class").slick({
-          centerMode: true,
-          centerPadding: "60px",
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 2000,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: "40px",
-                slidesToShow: 3,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: "40px",
-                slidesToShow: 1,
-              },
-            },
-          ],
-        });
-      });
-    </script> -->
-
-    <script>
-      $(".slider-for").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: ".slider-nav",
-      });
-      $(".slider-nav").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: ".slider-for",
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-      });
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5fa3bdc4fe038e7c95aa3174/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
     </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>

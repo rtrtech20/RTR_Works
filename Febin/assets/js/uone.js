@@ -78,14 +78,14 @@ function headerSticky() {
 ------------------------------*/
 function sliderOwlCarousel() {
   $(".hero .owl-carousel").owlCarousel({
-    loop: true,
+    loop: false,
     items: 1,
     nav: false,
-    autoplay: true,
-    touchDrag: true,
+    autoplay: false,
+    touchDrag: false,
     smartSpeed: 1000,
     animateOut: "fadeOut",
-    autoplayHoverPause: true,
+    autoplayHoverPause: false,
   });
 }
 

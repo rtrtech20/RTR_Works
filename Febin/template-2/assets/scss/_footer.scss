@@ -1,0 +1,357 @@
+//footer-area
+.footer-top-cta {
+	& .footer__widget {
+		@include transition(.4s);
+		&__icon {
+			@include transition(.4s);
+			display: inline-block;
+		}
+		&__icon__block {
+			@include transition(.4s);
+			display: none;
+		}
+		&:hover {
+			background: $theme-color;
+			& .footer__widget__icon {
+				display: none;
+			}
+			& .footer__widget__icon__block {
+				display: inline-block;
+			}
+		}
+		& h6 {
+			color: $white;
+			font-size: 18px;
+			line-height: 1.1;
+		}
+		& span {
+			color: $white;
+			font-size: 24px;
+			line-height: 1;
+			font-family: $mulish;
+			font-weight: 600;
+		}
+	} 
+}
+.footer-area {
+	.fot-shape {
+		left: 0;
+		top: 0;
+	}
+	.fot-shape-two {
+		right: 0;
+		bottom: 0;
+	}
+	& .scroll-target {
+		border-radius: 23px;
+		background-color: #57b33e;
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		margin: 0 auto;
+		top: -68px;
+		width: 50px;
+		height: 70px;
+		z-index: 1;
+		& i {
+			color: $white;
+			font-size: 25px; 
+			line-height: 70px;
+		}
+	}
+}
+
+.footer-bottom-area {
+	border-bottom: 1px solid #2a303a;
+	& .footer__widget {
+		& h5 {
+			color: $white;
+			font-size: 20px;
+			line-height: 1.3;
+			font-family: $mulish;
+			font-weight: 800;
+			&.bottom-line{
+				position: relative;
+				&::before {
+					content: "";
+					background-color: rgb(222, 222, 222);
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100px;
+					height: 2px;
+					z-index: 1;
+				}
+				&::after {
+					content: "";
+					background: $theme-color;;
+					position: absolute;
+					left: 0;
+					bottom: -1px;
+					width: 0;
+					height: 4px;
+					z-index: 2;
+					@include transition(.4s);
+				}
+			} 
+		}
+		&:hover {
+			& h5 {
+				&.bottom-line{
+					&::after {
+						width: 40px;
+					  }
+				 }
+			}  
+		}
+		
+		& p {
+			color: #c1c6ce;
+		}
+		.foter__social {
+			& > a {
+				width: 35px;
+				height: 35px;
+				font-size: 12px;
+				line-height: 35px;
+			}
+		}
+		& .fot-list {
+			& li {
+				& a {
+					color:#c1c6ce;
+					font-size: 15px;
+					line-height: 32px;
+					font-family: $mulish;
+					position: relative;
+					@include transition(.3s);
+					& i {
+						font-size: 12px;
+						position: absolute;
+						left: 0;
+						top: 4px;
+						display: none;
+						@include transition(.4s);
+					}
+					&:hover, &.active {
+						padding-left: 17px;
+						color:$theme-color;
+						& i {
+							display: block;
+							color: $theme-color;
+						}
+					}
+				}
+			} 
+		} 
+	} 
+	.blogs {
+		&__content {
+			& h6 {
+				margin-bottom: 0;
+				& a {
+					color: $grey-dark;
+					font-size: 16px;
+					line-height: 1.4;
+					font-family: "Mulish", sans-serif;
+					font-weight: 700;
+					& i {
+						font-size: 18px;
+					}
+				}
+			}
+			& .coment-name {
+				color: $grey-dark;
+				font-size: 13px;
+				line-height: 1;
+				font-weight: 400;
+				padding-left: 35px;
+				position: relative;
+				&::before {
+					content: "";
+					background: $theme-color2;
+					position: absolute;
+					left: 0;
+					top: 7px;
+					width: 25px;
+					height: 2px;
+					z-index: 1; 
+				}
+			}
+		}
+	}
+}
+.instagram {
+	margin-bottom: 10px;
+	display: inline-block;
+	position: relative;
+	@include transition(.4s);
+	@media #{$xs} {
+		margin: 0;
+	}
+	@media #{$xs} {
+		margin: 0;
+	}
+	&__thumb {
+		position: relative;
+		overflow: hidden;
+		@include transition(.4s);
+		& img {
+			display: block;
+			@include transition(.4s);
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: $theme-color;
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			@include transition(.4s);
+			z-index: 1;
+		}
+	}
+	&__icon {
+		font-size: 30px;
+		color: #fff;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 3;
+		@include transition(.4s);
+	}
+	&:hover {
+		.instagram__thumb {
+			&::before {
+				opacity: 0.85;
+			}
+		}
+		.instagram__icon {
+			opacity: 1;
+			visibility: visible;
+		}	
+	}
+}
+.copyright {
+	& p {
+		color:$grey-dark;
+	}
+	& a {
+		color:$theme-color;
+	}
+}
+.bottom-nav {
+	@media #{$xs} {
+		text-align: left !important;
+	}
+	@media #{$sm} {
+		text-align: left !important;
+	}
+	& ul {
+		& li {
+			display: inline-block;
+			& > a {
+				color: $grey-dark;
+				font-size: 15px;
+				line-height: 32px;
+				font-family: $mulish;
+				font-weight: 700;
+				display: inline-block;
+				margin-left: 28px;
+				@media #{$md} {
+					margin-left: 13px;
+				}
+				@media #{$xs} {
+					margin-left: 5px;
+				}
+				@media #{$sm} {
+					margin-left: 5px;
+				}
+				&:hover {
+					color: $theme-color;
+				}
+			}
+		} 
+	} 
+} 
+//footer2
+.fot-bottom-a2 {
+	border-bottom: 1px solid #eaeaea;
+	& .widget2 {
+		& h5 {
+			color: $heding;
+		}
+		& p {
+			color: $body-text-color;
+		}
+		& .fot-list {
+			& li {
+				& a {
+					color: $body-text-color;
+					& i {
+						color:$theme-color;
+					}
+				}
+			} 
+		} 
+	}
+	& .addres-bar {
+		&__icon {
+			& i {
+				color: $theme-color;
+				font-size: 18px;
+				margin-top: 8px;
+				display: inline-block;
+			} 
+		}
+		& .direction {
+			color: $body-text-color;
+			font-size: 18px;
+			line-height: 1;
+			font-weight: 400;
+			font-family: $mulish;
+		} 
+	}
+	
+}
+.copy-area2 {
+	& .scroll-target {
+		background: $theme-color;
+	}
+	& .copyright2 {
+		& p {
+			color:$body-text-color;
+		}
+	}
+	.bottom-nav  { 
+		& ul {
+			& li {
+				& a {
+					color:$body-text-color;
+				}
+			}
+		}
+	}	
+}
+//home-3
+.sub__widget {
+	@media #{$xs} {
+		margin-left: 0;
+	}
+	@media #{$sm} {
+		margin-left: 0;
+	}
+}
+

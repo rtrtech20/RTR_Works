@@ -1,0 +1,121 @@
+//plan-area
+.plan-area {
+	& .plane-shape-one {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	& .plane-shape-two {
+		position: absolute;
+		right: 75px;
+		top: 0;
+		animation: rotation infinite 50s linear;
+	}
+}
+.plan {
+	text-align: center;
+	background: $white;
+	box-shadow: 0px 10px 60px 0px rgba(233, 233, 233, 0.45);
+	padding: 45px 0 50px 0;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		background: url(/assets/img/shape/plan-shape8.png) no-repeat;
+		width: 302px;
+		height: 313px;
+		left: 0;
+		top: 33%;
+		transform: translateY(-33%);
+		@include transition(.4s);
+		@media #{$xs} {
+			width: 250px;
+		}
+		@media #{$sm} {
+			width: 250px;
+		}
+	}
+	&:hover {
+		&::before {
+			background: url(/assets/img/shape/plan-shape9.png) no-repeat;
+			@media #{$xs} {
+				width: 250px;
+			}
+			@media #{$sm} {
+				width: 250px;
+			}
+		}
+	}
+	&__head {
+		& p {
+			color: #ff7029;
+			font-weight: 800;
+			margin-left: 100px;
+			text-transform: uppercase;
+		}
+		& h1 {
+			color: $theme-color2;
+			font-size: 65px;
+			line-height: 1;
+			font-weight: 300;
+			font-family: $mulish;
+			margin-bottom: 25px;
+			& span {
+				font-size: 24px;
+			}
+		}
+		& h5 {
+			font-size: 24px;
+			line-height: 1.1;
+			font-weight: 800;
+			letter-spacing: 7px;
+			text-transform: uppercase;
+		}
+		& .tag {
+			color: white;
+			background: #ff7029;
+			clip-path: polygon(23% 6%, 78% 13%, 100% 100%, 0% 94%);
+			font-size: 13px;
+			line-height: 1;
+			font-weight: 800;
+			font-family: "Mulish", sans-serif;
+			text-transform: uppercase;
+			padding: 10px 30px;
+			display: inline-block;
+			transform: rotate(-48deg);
+			position: absolute;
+			left: -31px;
+			top: -26px;
+		}
+	} 
+	&__list {
+		& li {
+			color: $body-text-color;
+			font-size: 18px;
+			line-height: 1.3;
+			font-weight: 600;
+			font-family: $mulish;
+			margin-bottom: 20px;
+			& del {
+				border-color: $theme-color;
+			}
+		}
+	} 
+}
+.plane-shape-three {
+	content: "";
+	border-radius: 50%;
+	background-color: rgb(255, 112, 41);
+	position: absolute;
+	left: 289px;
+	bottom: 55px;
+	width: 200px;
+	height: 200px;
+}
+.plane-shape-four {
+	position: absolute;
+	right: 90px;
+	top: 120px;
+	animation: rotation 54s infinite linear;
+}
+  

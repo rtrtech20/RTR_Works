@@ -1,0 +1,185 @@
+//accordion
+.card {
+	background: 0;
+	border: 0;
+    border-radius: 0;
+    & .card-header {
+        background: none;
+        padding: 0;
+        border: 0;
+        padding-bottom: 25px;
+        & button:focus {
+            outline: none;
+            border: 0;
+            box-shadow: none;
+            text-decoration: none;
+        }
+        & button {
+            display: block;
+            border: 0;
+            font-size: 18px;
+            line-height: 1.1;
+            font-family: $mulish;
+            font-weight: 800;
+            color: $theme-color2;
+            width: 100%;
+            text-align: left;
+            background: 0;
+            padding: 0;
+            padding-left: 45px;
+            white-space: normal;
+            position: relative;
+            &.collapsed{
+                position: relative;
+                &::after {
+                    content: "+";
+                    position: absolute;
+                    left: 0;
+                    top: -5px;
+                    font-size: 15px;
+                    color: #fff;
+                    background: #57b33e;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+            }
+            &.btn-link {
+                position: relative;
+                &::before {
+                    content: "-";
+                    position: absolute;
+                    left: 0;
+                    top: -5px;
+                    font-size: 15px;
+                    color: #fff;
+                    background: #57b33e;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                }
+            } 
+        }
+        & .btn {
+            border: 0;
+            white-space: normal;
+        }
+        .btn-link:hover {
+           color: none;
+           text-decoration: none;
+        }
+    }
+    & .card-body {
+        color:$white;
+        padding: 0;
+        margin-bottom: 36px;
+    }
+}
+//.faq-area
+.faq-area {
+	& .card {
+		& .card-header {
+            padding-bottom: 0;
+			& button {
+                color:$white;
+                background: $theme-color;
+                padding: 25px 30px;
+                border-radius: 0;
+                white-space: normal;
+                @include transition(.4s);
+                @media #{$lg} {
+                    font-size: 16px;
+                }
+                @media #{$xs} {
+                    font-size: 14px;
+                }
+                @media #{$sm} {
+                    font-size: 14px;
+                }
+				& i {
+					font-size: 18px;
+                    line-height: 1;
+                    @include transition(.4s);
+				}
+				&.btn-link {
+					&::before {
+                        color:$theme-color;
+						right: 30px;
+						left: auto;
+						top: 50%;
+                        transform: translateY(-50%);
+                        background: $white;
+                        @include transition(.4s);
+                        @media #{$xs} {
+                            right: 10px;
+                        }
+                        @media #{$sm} {
+                            right: 10px;
+                        }
+					}
+				}
+				&.collapsed {
+                    color:$heding;
+                    background: $grey2;
+                    @include transition(.4s);
+					&::after {
+                        color:$white;
+						right: 30px;
+						left: auto;
+						top: 50%;
+						transform: translateY(-50%);
+                        background: $theme-color;
+                        @include transition(.4s);
+                        @media #{$xs} {
+                            right: 10px;
+                        }
+                        @media #{$sm} {
+                            right: 10px;
+                        }
+					}
+				}
+			}
+		}
+		& .card-body {
+            color: #616161;
+            border: 1px solid #e4e4e4;
+            padding: 30px 30px 25px 40px;
+            border-top: 0;
+            margin-bottom: 0;
+        }
+	} 
+}
+.faqs {
+    &-list {
+       & li {
+            color: $heding;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1;
+            font-family: $mulish;
+            float: left;
+            width: 49%;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            position: relative;
+            &::before {
+                content: "\f058";
+                position: absolute;
+                font-family: "Font Awesome 5 pro";
+                left: 0;
+                top: 0;
+                font-size: 15px;
+                line-height: 1;
+                color: $theme-color;
+                @include transition(.4s);
+            }
+            &:hover {
+                &::before {
+                    left:5px;
+                }
+            }
+        }
+    } 
+}

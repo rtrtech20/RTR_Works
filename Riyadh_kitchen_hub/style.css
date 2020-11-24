@@ -11754,3 +11754,8 @@ hr {
 .client-slider {
   margin: 0 auto;
 }
+
+
+.product-catalogue label {
+  font-size: 16px !important;
+}

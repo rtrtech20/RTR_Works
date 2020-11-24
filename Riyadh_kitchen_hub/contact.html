@@ -163,7 +163,10 @@
                     <ul
                       class="navbar-nav pageMainNavigation justify-content-md-end"
                     >
-                      <li class="nav-item">
+                      <div id="close-icon" class="close-icon">
+                        <i class="fas fa-times"></i>
+                      </div>
+                      <li class="nav-item active">
                         <a
                           class="nav-link fwMedium text-uppercase"
                           href="index.html"
@@ -174,10 +177,10 @@
                         <a
                           class="nav-link fwMedium text-uppercase"
                           href="gallery.html"
-                          >Products</a
+                          >pRODUCTS</a
                         >
                       </li>
-                      <li class="nav-item active">
+                      <li class="nav-item">
                         <a
                           class="nav-link fwMedium text-uppercase"
                           href="contact.html"
@@ -512,14 +515,20 @@
         id="back-top"
         class="text-center rounded-circle fa fa-angle-up"
       ></span>
-      
     </div>
     <!-- include jQuery library -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- include Plugins JavaScript -->
     <script src="js/plugins.js"></script>
     <!-- include custom JavaScript -->
-		<script src="js/jquery.main.js"></script>
-		<script src="js/rtr.js"></script>
+    <script src="js/jquery.main.js"></script>
+    <script src="js/rtr.js"></script>
+    <script>
+      document.getElementById("close-icon").addEventListener("click", closeNav);
+
+      function closeNav() {
+        document.getElementById("pageMainNavCollapse").classList.remove("show");
+      }
+    </script>
   </body>
 </html>

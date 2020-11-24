@@ -166,18 +166,21 @@
                     <ul
                       class="navbar-nav pageMainNavigation justify-content-md-end"
                     >
-                      <li class="nav-item">
+                      <div id="close-icon" class="close-icon">
+                        <i class="fas fa-times"></i>
+                      </div>
+                      <li class="nav-item active">
                         <a
                           class="nav-link fwMedium text-uppercase"
                           href="index.html"
                           >Home <span class="sr-only">(current)</span></a
                         >
                       </li>
-                      <li class="nav-item active">
+                      <li class="nav-item">
                         <a
                           class="nav-link fwMedium text-uppercase"
                           href="gallery.html"
-                          >Products</a
+                          >pRODUCTS</a
                         >
                       </li>
                       <li class="nav-item">
@@ -719,6 +722,13 @@
         // start fancybox:
         $(".gallery a").fancybox();
       });
+    </script>
+    <script>
+      document.getElementById("close-icon").addEventListener("click", closeNav);
+
+      function closeNav() {
+        document.getElementById("pageMainNavCollapse").classList.remove("show");
+      }
     </script>
   </body>
 </html>

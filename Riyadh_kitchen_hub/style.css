@@ -11780,13 +11780,14 @@ hr {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 90%; /* Could be more or less, depending on screen size */
   text-align: justify;
+  transition: 0.3s;
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: #ff0000;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -11794,7 +11795,7 @@ hr {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #ff0000;
   text-decoration: none;
   cursor: pointer;
 }

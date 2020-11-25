@@ -11798,3 +11798,11 @@ hr {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 500px) {
+  /* Modal Content/Box */
+.modal-content p {
+  font-size: 14px;
+  text-align: left;
+}
+}

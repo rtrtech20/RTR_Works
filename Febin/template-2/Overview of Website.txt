@@ -1,0 +1,24 @@
+Homepage (MVP)
+- Landing image and company vision/tagline (MVP) (Read more)
+- Company history (MVP)
+- what we offer (MVP)
+- Our Testimonials (Future)
+- Footer (MVP)
+
+- Side widget: Get a quote
+- savings calculator (Nice to have)
+
+Services (MVP)
+- Boxes: (MVP)
+	- Solar maintenance
+	- Off the grid solutions
+	- Grid connected solutions
+	- Repair Services
+
+	Form for getting the quote/registering complaint. (MVP)
+- Footer (MVP)
+
+Go Green: (MVP)
+	- Doodle video (MVP)
+		OR
+	- Process diagram and projected savings (MVP)

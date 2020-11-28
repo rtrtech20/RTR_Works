@@ -1,0 +1,14 @@
+Produtcs: 
+1. On-Grid Solar Power Plants
+	a. Residential
+	b. Commercial
+
+2. Off-Grid Solar Power Plants
+	a. Residential
+	b. Commercial
+
+3. UPS
+	a. Offline
+	b. Online
+
+4. Inverter

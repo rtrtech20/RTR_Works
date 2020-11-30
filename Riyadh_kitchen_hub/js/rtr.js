@@ -1,13 +1,3 @@
-/* File Description: preloader js */
-// (function ($) {
-//   "use strict";
-//   //Preloader
-//   window.addEventListener("load", function () {
-//     var preloadpage = document.getElementById("page_loader");
-//     preloadpage.style.display = "none";
-//   });
-// })(jQuery);
-
 $(window).on("load", function () {
   "use strict";
   $(".body").fadeOut(), $("body").removeClass("loading-scroll-hiden");

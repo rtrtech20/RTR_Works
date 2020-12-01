@@ -539,19 +539,7 @@ header .dropdown-menu {
   position: relative;
   display: inline-block;
 }
-.btn-round-.trngl:after {
-  content: "";
-  position: absolute;
-  right: -4px;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid #e8e8e8;
-  clear: both;
-  transform: translateY(-50%);
-}
+
 .btshad-b1 {
   -webkit-box-shadow: 0 10px 15px 0px rgba(175, 0, 87, 0.2);
   box-shadow: 0 10px 15px 0px rgba(175, 0, 87, 0.2);

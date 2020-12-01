@@ -8,12 +8,16 @@
       content="Creative Agency, Marketing Agency Template"
     />
     <meta name="keywords" content="Creative Agency, Marketing Agency" />
-    <meta name="author" content="rajesh-doot" />
+    <meta name="author" content="RTR Technologies" />
+
+    <link rel="canonical" href="https://www.rtr-technologies.com/">
+
+
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#101010" />
     <!--website-favicon-->
-    <link href="images/favicon.png" rel="icon" />
+    <link href="images/icon.png" rel="icon" />
     <!--plugin-css-->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/plugin.min.css" rel="stylesheet" />
@@ -28,6 +32,7 @@
     <!-- template-style-->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/rtr.css">
     <style>
       html {
         scroll-behavior: smooth;
@@ -39,7 +44,7 @@
     <div class="onloadpage" id="page_loader">
       <div class="pre-content">
         <div class="logo-pre">
-          <img src="images/logo.png" alt="Logo" class="img-fluid" />
+          <img src="images/logo-demo.png" alt="Logo" class="img-fluid" />
         </div>
         <div class="pre-text-">
           <span>RTR Technologies - Freelance Agency is 2 Seconds Away.</span
@@ -57,7 +62,9 @@
     <?php include "php/Clients.php"?>
     <?php include "php/Newsletter.php"?>
     <?php include "php/Footer.php"?>
-    
+    <?php include "php/Modal.php"?>
+
+
     <!--scroll to top-->
     <a id="scrollUp" href="#top"></a>
     <!-- js placed at the end of the document so the pages load faster -->
@@ -69,5 +76,6 @@
     <script src="js/preloader.js"></script>
     <!--common script file-->
     <script src="js/main.js"></script>
+    <script src="js/rtr.js"></script>
   </body>
 </html>

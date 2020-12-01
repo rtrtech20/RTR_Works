@@ -54,6 +54,27 @@
                     </p>
                   </div>
                 </div>
+
+                <div class="media mt50">
+                  <div
+                    class="img-ab- base"
+                    data-tilt
+                    data-tilt-max="20"
+                    data-tilt-speed="1000"
+                  >
+                    <img
+                      src="images/icons/worker.svg"
+                      alt="icon"
+                      class="layer"
+                    />
+                  </div>
+                  <div class="media-body">
+                    <h4>Our Mission</h4>
+                    <p>
+                    To empower individuals to grow their business by improving their online presence.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

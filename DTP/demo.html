@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      *,
+      *:after,
+      *:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .clearfix:before,
+      .clearfix:after {
+        display: table;
+        content: "";
+      }
+      .clearfix:after {
+        clear: both;
+      }
+
+      body {
+        background: #ffffff;
+        color: #333;
+        font-weight: normal;
+        font-size: 1em;
+        font-family: "Roboto", Arial, sans-serif;
+      }
+
+      input:focus,
+      textarea:focus,
+      keygen:focus,
+      select:focus {
+        outline: none;
+      }
+      ::-moz-placeholder {
+        color: #666;
+        font-weight: 300;
+        opacity: 1;
+      }
+
+      ::-webkit-input-placeholder {
+        color: #666;
+        font-weight: 300;
+      }
+
+      /* Contact Form Styling */
+
+      .textcenter {
+        text-align: center;
+      }
+      .contact-header {
+        text-align: center;
+        display: table;
+        width: 100%;
+      }
+      .contact-header .shtext {
+        display: block;
+        margin-top: 20px;
+      }
+      .contact-header .seperator {
+        border-bottom: 1px solid #a2a2a2;
+        width: 35px;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .contact-header h1 {
+        font-size: 40px;
+        color: #a44dd8;
+        font-weight: normal;
+      }
+
+      .contact-body {
+        width: 1200px;
+        margin: 25px auto;
+      }
+      .contact-body .col2 {
+        width: 48.71%;
+      }
+      .contact-body .col2.first {
+        float: left;
+      }
+      .contact-body .col2.last {
+        float: right;
+      }
+      .contact-body .col2.column2 {
+        padding: 0 30px;
+      }
+      .contact-body span.collig {
+        color: #a2a2a2;
+        margin-right: 10px;
+        display: inline-block;
+      }
+      .contact-body .sec2addr {
+        display: block;
+        line-height: 26px;
+      }
+      .contact-body .sec2addr p:first-child {
+        margin-bottom: 10px;
+      }
+      .contact-body .contact-form input[type="text"],
+      .contact-body .contact-form input[type="email"],
+      .contact-body .contact-form textarea {
+        padding: 18px;
+        border: 0;
+        background: #ededed;
+        margin: 7px 0;
+      }
+      .contact-body .contact-form textarea {
+        width: 100%;
+        display: block;
+        color: #666;
+        resize: none;
+      }
+      .contact-body .contact-form input[type="submit"] {
+        padding: 15px 40px;
+        color: #fff;
+        border: 0;
+        background: #a44dd8;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 7px 0;
+        cursor: pointer;
+      }
+      .contact-body .contact-form h3 {
+        font-weight: normal;
+        margin: 20px 0;
+        margin-top: 30px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 19px;
+        color: #a44dd8;
+      }
+
+      /* @media querries */
+
+      @media only screen and (max-width: 1266px) {
+        .contact-body {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 960px) {
+        .container {
+          padding: 0 30px 70px;
+        }
+        .contact-body .col2 {
+          width: 100%;
+          display: block;
+        }
+        .contact-body .col2.first {
+          margin-bottom: 10px;
+        }
+        .contact-body .col2.column2 {
+          padding: 0;
+        }
+        body .sec2map {
+          height: 250px !important;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .contact-body .sec2addr {
+          font-size: 14px;
+        }
+        .contact-body .contact-form h3 {
+          font-size: 16px;
+        }
+        .contact-body .contact-form input[type="text"],
+        .contact-body .contact-form input[type="email"],
+        .contact-body .contact-form textarea {
+          padding: 10px;
+          margin: 3px 0;
+        }
+        .contact-body .contact-form input[type="submit"] {
+          padding: 10px 30px;
+          font-size: 14px;
+        }
+      }
+      @media only screen and (max-width: 420px) {
+        .contact-header h1 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="innerwrap">
+        <section class="contact-header clearfix">
+          <div class="textcenter">
+            <h1>Drop Us a Mail</h1>
+          </div>
+        </section>
+
+        <section class="contact-body clearfix">
+          <div class="col2 column1 first">
+            <div
+              class="sec2map"
+              style="overflow: hidden; height: 550px; width: 100%"
+            >
+              <div id="gmap_canvas" style="height: 100%; width: 100%">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15781.882097809465!2d76.9212944!3d8.5506708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40c8319ca1c75337!2sRTR%20Technologies!5e0!3m2!1sen!2sin!4v1607196910205!5m2!1sen!2sin"
+                  width="100%"
+                  height="550"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col2 column2 last">
+            <div class="sec2innercont">
+              <div class="sec2addr">
+                <p>
+                  45 BC, a Latin professor at Hampden-Sydney College in Virginia
+                </p>
+                <p><span class="collig">Phone :</span> +91 976885083</p>
+                <p>
+                  <span class="collig">Email :</span> vivek.mengu016@gmail.com
+                </p>
+                <p><span class="collig">Fax :</span> +91 9768850839</p>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3 class="contact-form-title">
+                Want to Know More?? Drop Us a Mail
+              </h3>
+              <form action="">
+                <div class="clearfix">
+                  <input
+                    class="col2 first"
+                    type="text"
+                    placeholder="FirstName"
+                  />
+                  <input class="col2 last" type="text" placeholder="LastName" />
+                </div>
+                <div class="clearfix">
+                  <input class="col2 first" type="Email" placeholder="Email" />
+                  <input
+                    class="col2 last"
+                    type="text"
+                    placeholder="Contact Number"
+                  />
+                </div>
+                <div class="clearfix">
+                  <textarea name="textarea" id="" cols="30" rows="7">
+Your message here...</textarea
+                  >
+                </div>
+                <div class="clearfix"><input type="submit" value="Send" /></div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

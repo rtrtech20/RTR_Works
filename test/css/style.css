@@ -31,9 +31,24 @@ File Description: Main CSS file of the template*/
   background: #fb5496;
 }
 ::-webkit-scrollbar-thumb {
-  background-image: -webkit-linear-gradient(45deg, #ffbd84, #ff1f8e);
-  background-image: -o-linear-gradient(45deg, #ffbd84, #ff1f8e);
-  background-image: linear-gradient(45deg, #ffbd84, #ff1f8e);
+  background-image: -webkit-linear-gradient(
+    135deg,
+    #9100ff 0%,
+    #3663ff 54%,
+    #00e2ff 100%
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    #9100ff 0%,
+    #3663ff 54%,
+    #00e2ff 100%
+  );
+  background-image: linear-gradient(
+    135deg,
+    #9100ff 0%,
+    #3663ff 54%,
+    #00e2ff 100%
+  );
 }
 /*Default css*/
 ::-moz-selection {
@@ -164,6 +179,9 @@ button,
 -o-transition: all 0.4s;
 -webkit-transition: all 0.4s;
 transition: all 0.4s;*/
+}
+textarea {
+  resize: none;
 }
 .no-shadow {
   box-shadow: none !important;
@@ -491,7 +509,10 @@ header .dropdown-menu {
   line-height: 85px;
 }
 .dsk-logo .nav-brand img {
-  max-height: 75px;
+  max-height: 70px;
+}
+.sticky .dsk-logo .nav-brand img {
+  max-height: 55px;
 }
 .custom-nav {
   float: right;
@@ -3417,6 +3438,7 @@ footer.ftshap:before {
 }
 .itm-media-object .media-body {
   margin-left: 30px;
+  text-align: justify;
 }
 .why-choos-lg {
   position: relative;
@@ -3978,6 +4000,11 @@ p.video-lab-- {
   z-index: 5;
   overflow: hidden;
 }
+
+.nn-card-set p {
+  text-align: justify;
+}
+
 .ho-gdnt .s-block:hover:before {
   opacity: 1;
 }

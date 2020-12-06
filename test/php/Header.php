@@ -3,9 +3,8 @@
   <div class="container-fluid m-pad">
     <div class="menu-header">
       <div class="dsk-logo">
-        <a class="nav-brand" href="digital-agency.html">
-          <img src="images/white-logo.png" alt="Logo" class="mega-white-logo" />
-          <img src="images/logo-demo.png" alt="Logo" class="mega-darks-logo" />
+        <a class="nav-brand" href="/">
+          <img src="images/RTR-black.png" alt="Logo" class="mega-darks-logo" />
         </a>
       </div>
       <div class="custom-nav" role="navigation">
@@ -13,9 +12,18 @@
           <li><a href="#home" class="menu-links">Home</a></li>
           <li><a href="#about" class="menu-links">About</a></li>
           <li><a href="#services" class="menu-links">Services</a></li>
-          <li><a href="#work" class="menu-links">Work</a></li>
+          <li><a href="#clients" class="menu-links">Clients</a></li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              data-toggle="modal"
+              data-target="#menu-popup"
+              class="menu-links"
+              >Contact Us</a
+            >
+          </li>
           <li class="contact-show">
-            <a href="#" class="btn-round-trngl btn-br bg-btn"
+            <a href="javascript:void(0);" class="btn-round-trngl btn-br bg-btn7"
               ><i class="fas fa-phone-alt"></i
             ></a>
             <div class="contact-inquiry">
@@ -43,7 +51,7 @@
                         >RTR Technologies</a
                       >
                     </li>
-                    <li>
+                    <li class="contact-mail">
                       <i class="fas fa-envelope"></i
                       ><a href="mailto:help@rtr-technologies.com"
                         >help@rtr-technologies.com</a
@@ -57,7 +65,7 @@
           <li>
             <a
               href="get-quote.html"
-              class="btn-br bg-btn5 btshad-b2 lnk"
+              class="btn-br bg-btn7 btshad-b2 lnk"
               data-toggle="modal"
               data-target="#menu-popup"
               >Request A Quote <span class="circle"></span
@@ -70,7 +78,7 @@
           <li>
             <a
               href="#"
-              class="btn-round- trngl btn-br bg-btn btshad-b1"
+              class="btn-round- trngl btn-br bg-btn7 btshad-b1"
               data-toggle="modal"
               data-target="#menu-popup"
               ><i class="fas fa-envelope-open-text"></i
@@ -88,11 +96,11 @@
         <li><a href="#home" class="menu-links">Home</a></li>
         <li><a href="#about" class="menu-links">About</a></li>
         <li><a href="#services" class="menu-links">Services</a></li>
-        <li><a href="#work" class="menu-links">Work</a></li>
+        <li><a href="#clients" class="menu-links">Clients</a></li>
       </ul>
       <ul class="bottom-nav">
         <li class="prb">
-          <a href="tel:+11111111111">
+          <a href="tel:+918281592765">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384">
               <path
                 d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.719-3.656-23.896-0.302-30.438,6.417l-43.177,32.594
@@ -104,7 +112,7 @@
           </a>
         </li>
         <li class="prb">
-          <a href="mailto:somewebmedia@gmail.com">
+          <a href="mailto:help@rtr-technologies.com">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -119,18 +127,8 @@
           </a>
         </li>
         <li class="prb">
-          <a href="skype:niwax.company?call">
-            <svg
-              enable-background="new 0 0 24 24"
-              height="18"
-              viewBox="0 0 24 24"
-              width="18"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m23.309 14.547c1.738-7.81-5.104-14.905-13.139-13.543-4.362-2.707-10.17.352-10.17 5.542 0 1.207.333 2.337.912 3.311-1.615 7.828 5.283 14.821 13.311 13.366 5.675 3.001 11.946-2.984 9.086-8.676zm-7.638 4.71c-2.108.867-5.577.872-7.676-.227-2.993-1.596-3.525-5.189-.943-5.189 1.946 0 1.33 2.269 3.295 3.194.902.417 2.841.46 3.968-.3 1.113-.745 1.011-1.917.406-2.477-1.603-1.48-6.19-.892-8.287-3.483-.911-1.124-1.083-3.107.037-4.545 1.952-2.512 7.68-2.665 10.143-.768 2.274 1.76 1.66 4.096-.175 4.096-2.207 0-1.047-2.888-4.61-2.888-2.583 0-3.599 1.837-1.78 2.731 2.466 1.225 8.75.816 8.75 5.603-.005 1.992-1.226 3.477-3.128 4.253z"
-              />
-            </svg>
+          <a href="https://wa.me/c/917907060312" target="_blank">
+            <i class="fab fa-whatsapp"></i>
           </a>
         </li>
       </ul>
@@ -153,7 +151,25 @@
         <!-- Modal body -->
         <div class="modal-body">
           <div class="form-block fdgn2 mt10 mb10">
-            <form action="#" method="post" name="feedback-form">
+            <form
+              action="mail.php"
+              method="post"
+              name="feedback-form"
+              class="contact__form"
+            >
+              <!-- form message -->
+              <div class="row">
+                <div class="col-12">
+                  <div
+                    class="alert alert-success contact__msg"
+                    style="display: none"
+                    role="alert"
+                  >
+                    Your message was sent successfully.
+                  </div>
+                </div>
+              </div>
+              <!-- end message -->
               <div class="fieldsets row">
                 <div class="col-md-12">
                   <input
@@ -195,12 +211,7 @@
                 </div>
               </div>
               <div class="fieldsets mt20 pb20">
-                <button
-                  type="submit"
-                  name="submit"
-                  class="lnk btn-main bg-btn"
-                  data-dismiss="modal"
-                >
+                <button type="submit" name="submit" class="lnk btn-main bg-btn">
                   Submit <i class="fas fa-chevron-right fa-icon"></i
                   ><span class="circle"></span>
                 </button>

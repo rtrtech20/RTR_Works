@@ -25,7 +25,7 @@
                 id="newsletter-submit"
                 type="submit"
                 name="send"
-                class="lnk btn-main bg-btn"
+                class="lnk btn-main bg-btn7"
               >
                 Subscribe <i class="fas fa-chevron-right fa-icon"></i
                 ><span class="circle"></span>
@@ -44,9 +44,7 @@
             <img src="images/RTR-black.png" alt="Logo" width="120"
           /></a>
           <p>
-            We are a Trivandrum based tech firm. Our experienced team is capable
-            of taking your ideas from the sketchboard to deployment and
-            maintanence.
+            Looking for a quality and affordable service for your next project? RTR Technologies is the right choice.
           </p>
         </div>
         <div class="col-lg-5 col-sm-6">
@@ -88,7 +86,6 @@
         <div class="col-lg-2 col-sm-6">
           <h5>Company</h5>
           <ul class="footer-address-list link-hover">
-            <li><a href="#contact">Contact</a></li>
             <li>
               <a
                 href="javascript:void(0);"
@@ -121,7 +118,6 @@
                 >Customer's FAQ</a
               >
             </li>
-            
           </ul>
         </div>
       </div>

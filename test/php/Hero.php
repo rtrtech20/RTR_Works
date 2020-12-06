@@ -6,17 +6,14 @@
             <div class="col-lg-6 v-center">
               <div class="header-heading">
                 <h1 class="wow fadeInUp" data-wow-delay=".2s">
-                  Creative Digital Agency
-                  <span class="text-primary">Focused</span> on
-                  <span class="text-primary">Growing</span> Brands Online
+                  Your
+                  <span class="text-primary">Digital</span> Partner
                 </h1>
                 <p class="wow fadeInUp" data-wow-delay=".4s">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse faucibus, risus sit amet auctor sodales, justo
-                  erat tempor eros.
+                Open up your business to new possibilities.
                 </p>
                 <a
-                  href="#"
+                  href="#services"
                   class="btn-main bg-btn7 lnk wow fadeInUp"
                   data-wow-delay=".6s"
                   >GET STARTED<i class="fas fa-chevron-right fa-icon"></i
